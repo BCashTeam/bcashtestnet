@@ -1,9 +1,9 @@
 Release Process
 ====================
 
-* Update translations, see [translation_process.md](https://github.com/dashpay/bcash/blob/master/doc/translation_process.md#synchronising-translations).
+* Update translations, see [translation_process.md](https://github.com/bcashpay/bcash/blob/master/doc/translation_process.md#synchronising-translations).
 
-* Update manpages, see [gen-manpages.sh](https://github.com/dashpay/bcash/blob/master/contrib/devtools/README.md#gen-manpagessh).
+* Update manpages, see [gen-manpages.sh](https://github.com/bcashpay/bcash/blob/master/contrib/devtools/README.md#gen-manpagessh).
 
 Before every minor and major release:
 
@@ -29,10 +29,10 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 Check out the source code in the following directory hierarchy.
 
 	cd /path/to/your/toplevel/build
-	git clone https://github.com/dashpay/gitian.sigs.git
-	git clone https://github.com/dashpay/bcash-detached-sigs.git
+	git clone https://github.com/bcashpay/gitian.sigs.git
+	git clone https://github.com/bcashpay/bcash-detached-sigs.git
 	git clone https://github.com/devrandom/gitian-builder.git
-	git clone https://github.com/dashpay/bcash.git
+	git clone https://github.com/bcashpay/bcash.git
 
 ### BCash Core maintainers/release engineers, update (commit) version in sources
 
@@ -172,7 +172,7 @@ Commit your signature to gitian.sigs:
 Wait for Windows/OS X detached signatures:
 
 - Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [bcash-detached-sigs](https://github.com/dashpay/bcash-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+- Detached signatures will then be committed to the [bcash-detached-sigs](https://github.com/bcashpay/bcash-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
 Create (and optionally verify) the signed OS X binary:
 
@@ -246,12 +246,12 @@ Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spur
 
   - Release on BCash forum: https://www.bcash.org/forum/topic/official-announcements.54/
 
-  - Optionally Discord, twitter, reddit /r/Dashpay, ... but this will usually sort out itself
+  - Optionally Discord, twitter, reddit /r/BCashpay, ... but this will usually sort out itself
 
   - Notify flare so that he can start building [the PPAs](https://launchpad.net/~bcash.org/+archive/ubuntu/bcash)
 
   - Archive release notes for the new version to `doc/release-notes/` (branch `master` and branch of the release)
 
-  - Create a [new GitHub release](https://github.com/dashpay/bcash/releases/new) with a link to the archived release notes.
+  - Create a [new GitHub release](https://github.com/bcashpay/bcash/releases/new) with a link to the archived release notes.
 
   - Celebrate

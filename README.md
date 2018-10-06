@@ -1,7 +1,7 @@
 BCash Core staging tree 0.12.3
 ===============================
 
-`master:` [![Build Status](https://travis-ci.org/dashpay/bcash.svg?branch=master)](https://travis-ci.org/dashpay/bcash) `develop:` [![Build Status](https://travis-ci.org/dashpay/bcash.svg?branch=develop)](https://travis-ci.org/dashpay/bcash/branches)
+`master:` [![Build Status](https://travis-ci.org/bcashpay/bcash.svg?branch=master)](https://travis-ci.org/bcashpay/bcash) `develop:` [![Build Status](https://travis-ci.org/bcashpay/bcash.svg?branch=develop)](https://travis-ci.org/bcashpay/bcash/branches)
 
 https://www.bcash.org
 
@@ -29,7 +29,7 @@ Development Process
 -------------------
 
 The `master` branch is meant to be stable. Development is normally done in separate branches.
-[Tags](https://github.com/dashpay/bcash/tags) are created to indicate new official,
+[Tags](https://github.com/bcashpay/bcash/tags) are created to indicate new official,
 stable release versions of BCash Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).

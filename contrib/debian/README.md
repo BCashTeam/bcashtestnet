@@ -1,8 +1,8 @@
 
 Debian
 ====================
-This directory contains files used to package dashd/bcash-qt
-for Debian-based Linux systems. If you compile dashd/bcash-qt yourself, there are some useful files here.
+This directory contains files used to package bcashd/bcash-qt
+for Debian-based Linux systems. If you compile bcashd/bcash-qt yourself, there are some useful files here.
 
 ## bcash: URI support ##
 
@@ -15,7 +15,7 @@ To install:
 
 If you build yourself, you will either need to modify the paths in
 the .desktop file or copy or symlink your bcash-qt binary to `/usr/bin`
-and the `../../share/pixmaps/dash128.png` to `/usr/share/pixmaps`
+and the `../../share/pixmaps/bcash128.png` to `/usr/share/pixmaps`
 
 bcash-qt.protocol (KDE)
 

@@ -12,7 +12,7 @@ The following are some helpful notes on how to run BCash on your native platform
 Unpack the files into a directory and run:
 
 - `bin/bcash-qt` (GUI) or
-- `bin/dashd` (headless)
+- `bin/bcashd` (headless)
 
 ### Windows
 
@@ -24,9 +24,9 @@ Drag BCash-Qt to your applications folder, and then run BCash-Qt.
 
 ### Need Help?
 
-* See the [BCash documentation](https://dashpay.atlassian.net/wiki/display/DOC)
+* See the [BCash documentation](https://bcashpay.atlassian.net/wiki/display/DOC)
 for help and more information.
-* Ask for help on [BCash Nation Discord](http://dashchat.org)
+* Ask for help on [BCash Nation Discord](http://bcashchat.org)
 * Ask for help on the [BCash Forum](https://bcash.org/forum)
 
 Building
@@ -58,7 +58,7 @@ The BCash Core repo's [root README](/README.md) contains relevant information on
 
 ### Resources
 * Discuss on the [BCash Forum](https://bcash.org/forum), in the Development & Technical Discussion board.
-* Discuss on [BCash Nation Discord](http://dashchat.org)
+* Discuss on [BCash Nation Discord](http://bcashchat.org)
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

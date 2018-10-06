@@ -4,7 +4,7 @@ TOPDIR=${TOPDIR:-$(git rev-parse --show-toplevel)}
 SRCDIR=${SRCDIR:-$TOPDIR/src}
 MANDIR=${MANDIR:-$TOPDIR/doc/man}
 
-BITCOIND=${BITCOIND:-$SRCDIR/dashd}
+BITCOIND=${BITCOIND:-$SRCDIR/bcashd}
 BITCOINCLI=${BITCOINCLI:-$SRCDIR/bcash-cli}
 BITCOINTX=${BITCOINTX:-$SRCDIR/bcash-tx}
 BITCOINQT=${BITCOINQT:-$SRCDIR/qt/bcash-qt}

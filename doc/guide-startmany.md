@@ -16,9 +16,9 @@ Create a new wallet address for each Masternode.
 
 Close your QT Wallet.
 
-### Send 1000 DASH to New Addresses
+### Send 1000 BCASH to New Addresses
 
-Send exactly 1000 DASH to each new address created above.
+Send exactly 1000 BCASH to each new address created above.
 
 ### Create New Masternode Private Keys
 
@@ -38,9 +38,9 @@ Remember... this is local. Make sure your QT is not running.
 
 Create the `masternode.conf` file in the same directory as your `wallet.dat`.
 
-Copy the masternode private key and correspondig collateral output transaction that holds the 1000 DASH.
+Copy the masternode private key and correspondig collateral output transaction that holds the 1000 BCASH.
 
-*Note: The masternode priviate key is **not** the same as a wallet private key. **Never** put your wallet private key in the masternode.conf file. That is almost equivalent to putting your 1000 DASH on the remote server and defeats the purpose of a hot/cold setup.*
+*Note: The masternode priviate key is **not** the same as a wallet private key. **Never** put your wallet private key in the masternode.conf file. That is almost equivalent to putting your 1000 BCASH on the remote server and defeats the purpose of a hot/cold setup.*
 
 ### Get the collateral output
 
@@ -53,7 +53,7 @@ Issue the following:
 Make note of the hash (which is your collateral_output) and index.
 
 ### Enter your Masternode details into your masternode.conf file
-[From the bcash github repo](https://github.com/dashpay/bcash/blob/master/doc/masternode_conf.md)
+[From the bcash github repo](https://github.com/bcashpay/bcash/blob/master/doc/masternode_conf.md)
 
 `masternode.conf` format is a space seperated text file. Each line consisting of an alias, IP address followed by port, masternode private key, collateral output transaction id and collateral output index.
 
@@ -74,7 +74,7 @@ If you generated a new masternode private key, you will need to update the remot
 
 Shut down the daemon and then edit the file.
 
-```nano .dashcore/bcash.conf```
+```nano .bcashcore/bcash.conf```
 
 ### Edit the masternodeprivkey
 If you generated a new masternode private key, you will need to update the `masternodeprivkey` value in your remote `bcash.conf` file.
@@ -120,7 +120,7 @@ bcash-cli masternode status
 {
     "outpoint" : "<collateral_output>-<collateral_output_index>",
     "service" : "<ipaddress>:<port>",
-    "pubkey" : "<1000 DASH address>",
+    "pubkey" : "<1000 BCASH address>",
     "status" : "Masternode successfully started"
 }
 ```
@@ -128,6 +128,6 @@ Command output should have "_Masternode successfully started_" in its `status` f
 
 ### Local
 
-Search your Masternodes on https://dashninja.pl/masternodes.html
+Search your Masternodes on https://bcashninja.pl/masternodes.html
 
 _Hint: Bookmark it, you definitely will be using this site a lot._

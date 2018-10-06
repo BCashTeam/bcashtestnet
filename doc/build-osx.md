@@ -29,7 +29,7 @@ Build BCash Core
 
 1. Clone the BCash Core source code and cd into `bcash`
 
-        git clone https://github.com/dashpay/bcash
+        git clone https://github.com/bcashpay/bcash
         cd bcash
 
 2.  Build BCash Core:
@@ -53,24 +53,24 @@ Build BCash Core
 Running
 -------
 
-BCash Core is now available at `./src/dashd`
+BCash Core is now available at `./src/bcashd`
 
 Before running, it's recommended you create an RPC configuration file.
 
-    echo -e "rpcuser=dashrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/DashCore/bcash.conf"
+    echo -e "rpcuser=bcashrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/bcashCore/bcash.conf"
 
-    chmod 600 "/Users/${USER}/Library/Application Support/DashCore/bcash.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/BCashCore/bcash.conf"
 
-The first time you run dashd, it will start downloading the blockchain. This process could take several hours.
+The first time you run bcashd, it will start downloading the blockchain. This process could take several hours.
 
 You can monitor the download process by looking at the debug.log file:
 
-    tail -f $HOME/Library/Application\ Support/DashCore/debug.log
+    tail -f $HOME/Library/Application\ Support/BCashCore/debug.log
 
 Other commands:
 -------
 
-    ./src/dashd -daemon # Starts the bcash daemon.
+    ./src/bcashd -daemon # Starts the bcash daemon.
     ./src/bcash-cli --help # Outputs a list of command-line options.
     ./src/bcash-cli help # Outputs a list of RPC commands when the daemon is running.
 

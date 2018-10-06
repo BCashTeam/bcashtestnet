@@ -9,7 +9,7 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between bcash-cli and dashd)
+ * CBaseChainParams defines the base parameters (shared between bcash-cli and bcashd)
  * of a given instance of the BCash system.
  */
 class CBaseChainParams

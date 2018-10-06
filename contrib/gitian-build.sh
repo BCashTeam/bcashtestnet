@@ -17,7 +17,7 @@ osx=true
 SIGNER=
 VERSION=
 commit=false
-url=https://github.com/dashpay/bcash
+url=https://github.com/bcashpay/bcash
 proc=2
 mem=2000
 lxc=true
@@ -40,7 +40,7 @@ version		Version number, commit, or branch to build. If building a commit or bra
 
 Options:
 -c|--commit	Indicate that the version argument is for a commit or branch
--u|--url	Specify the URL of the repository. Default is https://github.com/dashpay/bcash
+-u|--url	Specify the URL of the repository. Default is https://github.com/bcashpay/bcash
 -v|--verify 	Verify the gitian build
 -b|--build	Do a gitian build
 -s|--sign	Make signed binaries for Windows and Mac OSX
@@ -249,8 +249,8 @@ echo ${COMMIT}
 if [[ $setup = true ]]
 then
     sudo apt-get install ruby apache2 git apt-cacher-ng python-vm-builder qemu-kvm qemu-utils
-    git clone https://github.com/dashpay/gitian.sigs.git
-    git clone https://github.com/dashpay/bcash-detached-sigs.git
+    git clone https://github.com/bcashpay/gitian.sigs.git
+    git clone https://github.com/bcashpay/bcash-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
     pushd ./gitian-builder
     if [[ -n "$USE_LXC" ]]
@@ -277,7 +277,7 @@ popd
 if [[ $build = true ]]
 then
 	# Make output folder
-	mkdir -p ./dashcore-binaries/${VERSION}
+	mkdir -p ./bcashcore-binaries/${VERSION}
 	
 	# Build Dependencies
 	echo ""
@@ -297,7 +297,7 @@ then
 	    echo ""
 	    ./bin/gbuild -j ${proc} -m ${mem} --commit bcash=${COMMIT} --url bcash=${url} ../bcash/contrib/gitian-descriptors/gitian-linux.yml
 	    ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION}-linux --destination ../gitian.sigs/ ../bcash/contrib/gitian-descriptors/gitian-linux.yml
-	    mv build/out/dashcore-*.tar.gz build/out/src/dashcore-*.tar.gz ../dashcore-binaries/${VERSION}
+	    mv build/out/bcashcore-*.tar.gz build/out/src/bcashcore-*.tar.gz ../bcashcore-binaries/${VERSION}
 	fi
 	# Windows
 	if [[ $windows = true ]]
@@ -307,8 +307,8 @@ then
 	    echo ""
 	    ./bin/gbuild -j ${proc} -m ${mem} --commit bcash=${COMMIT} --url bcash=${url} ../bcash/contrib/gitian-descriptors/gitian-win.yml
 	    ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../bcash/contrib/gitian-descriptors/gitian-win.yml
-	    mv build/out/dashcore-*-win-unsigned.tar.gz inputs/dashcore-win-unsigned.tar.gz
-	    mv build/out/dashcore-*.zip build/out/dashcore-*.exe ../dashcore-binaries/${VERSION}
+	    mv build/out/bcashcore-*-win-unsigned.tar.gz inputs/bcashcore-win-unsigned.tar.gz
+	    mv build/out/bcashcore-*.zip build/out/bcashcore-*.exe ../bcashcore-binaries/${VERSION}
 	fi
 	# Mac OSX
 	if [[ $osx = true ]]
@@ -318,8 +318,8 @@ then
 	    echo ""
 	    ./bin/gbuild -j ${proc} -m ${mem} --commit bcash=${COMMIT} --url bcash=${url} ../bcash/contrib/gitian-descriptors/gitian-osx.yml
 	    ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../bcash/contrib/gitian-descriptors/gitian-osx.yml
-	    mv build/out/dashcore-*-osx-unsigned.tar.gz inputs/dashcore-osx-unsigned.tar.gz
-	    mv build/out/dashcore-*.tar.gz build/out/dashcore-*.dmg ../dashcore-binaries/${VERSION}
+	    mv build/out/bcashcore-*-osx-unsigned.tar.gz inputs/bcashcore-osx-unsigned.tar.gz
+	    mv build/out/bcashcore-*.tar.gz build/out/bcashcore-*.dmg ../bcashcore-binaries/${VERSION}
 	fi
 	popd
 
@@ -383,8 +383,8 @@ then
 	    echo ""
 	    ./bin/gbuild -i --commit signature=${COMMIT} ../bcash/contrib/gitian-descriptors/gitian-win-signer.yml
 	    ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../bcash/contrib/gitian-descriptors/gitian-win-signer.yml
-	    mv build/out/dashcore-*win64-setup.exe ../dashcore-binaries/${VERSION}
-	    mv build/out/dashcore-*win32-setup.exe ../dashcore-binaries/${VERSION}
+	    mv build/out/bcashcore-*win64-setup.exe ../bcashcore-binaries/${VERSION}
+	    mv build/out/bcashcore-*win32-setup.exe ../bcashcore-binaries/${VERSION}
 	fi
 	# Sign Mac OSX
 	if [[ $osx = true ]]
@@ -394,7 +394,7 @@ then
 	    echo ""
 	    ./bin/gbuild -i --commit signature=${COMMIT} ../bcash/contrib/gitian-descriptors/gitian-osx-signer.yml
 	    ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../bcash/contrib/gitian-descriptors/gitian-osx-signer.yml
-	    mv build/out/dashcore-osx-signed.dmg ../dashcore-binaries/${VERSION}/dashcore-${VERSION}-osx.dmg
+	    mv build/out/bcashcore-osx-signed.dmg ../bcashcore-binaries/${VERSION}/bcashcore-${VERSION}-osx.dmg
 	fi
 	popd
 

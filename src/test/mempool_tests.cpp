@@ -5,7 +5,7 @@
 #include "txmempool.h"
 #include "util.h"
 
-#include "test/test_dash.h"
+#include "test/test_bcash.h"
 
 #include <boost/test/unit_test.hpp>
 #include <list>
