@@ -323,44 +323,9 @@ public:
         nDefaultPort = 19903;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1538967600, 0, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1538967600, 476284, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-		if(true && genesis.GetHash() != uint256S("0x"))
-		{
-			printf("Searching for genesis block...\n");
-			arith_uint256 hashTarget = arith_uint256().SetCompact(genesis.nBits);
-		
-			unsigned int nHashesDone = 0;
-
-			uint256 hash;
-			while (true)
-			{
-				//hash = genesis->GetHash();
-				hash = HashX11(BEGIN(genesis.nVersion), END(genesis.nNonce));
-				
-				if (UintToArith256(hash) <= hashTarget)
-				{
-					break;
-				}
-				if ((genesis.nNonce & 0xFFF) == 0)
-				{
-					printf("nonce %08X: hash = %s (target = %s)\n", genesis.nNonce, hash.ToString().c_str(), hashTarget.ToString().c_str());
-				}
-				++genesis.nNonce;
-				if (genesis.nNonce == 0)
-				{
-					printf("NONCE WRAPPED, incrementing time\n");
-					++genesis.nTime;
-				}
-				nHashesDone += 1;
-				
-			}
-			printf("genesis.nTime = %u \n", genesis.nTime);
-            printf("genesis.nNonce = %u \n", genesis.nNonce);
-            printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-			printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
-		}
-         assert(consensus.hashGenesisBlock == uint256S("0x00000ab959f584c93ce0ab3fc5f241b74384311b767d9eba8342499da6a3c46c"));
+		assert(consensus.hashGenesisBlock == uint256S("0x00000ab959f584c93ce0ab3fc5f241b74384311b767d9eba8342499da6a3c46c"));
         assert(genesis.hashMerkleRoot == uint256S("0x00a9a17242d0e53b890f8edfbc2ae017687af7cf929ac2dcb79f2ff4147af2df"));
 
         vFixedSeeds.clear();
@@ -397,16 +362,12 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            (    261, uint256S("0x00000c26026d0815a7e2ce4fa270775f61403c040647ff2c3091f99e894a4618"))
-            (   1999, uint256S("0x00000052e538d27fa53693efe6fb6892a0c1d26c0235f599171c48a3cce553b1"))
-            (   2999, uint256S("0x0000024bc3f4f4cb30d29827c13d921ad77d2c6072e586c7f60d83c2722cdcc5"))
-            ( 100000, uint256S("0x0000000003aa53e24b6e60ef97642e4193611f2bcb75ea1fa8105f0b5ffd5242"))
-            ( 143200, uint256S("0x0000000004a7878409189b7a8f75b3815d9b8c45ee8f79955a6c727d83bddb04"))
+            (    0, uint256S("0x00000ab959f584c93ce0ab3fc5f241b74384311b767d9eba8342499da6a3c46c"))
         };
 
         chainTxData = ChainTxData{        
             1529294335, // * UNIX timestamp of last known number of transactions
-            5810120,    // * total number of transactions between genesis and that timestamp
+            1538967600,    // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0.01        // * estimated number of transactions per second after that timestamp
         };
