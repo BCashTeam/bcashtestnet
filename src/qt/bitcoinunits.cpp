@@ -1,5 +1,6 @@
 // Copyright (c) 2011-2015 The Bitcoin Core developers
-// Copyright (c) 2014-2017 The BCash Core developers
+// Copyright (c) 2014-2018 The Dash developers
+// Copyright (c) 2018-2018 The BCash developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -22,7 +23,7 @@ QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
     unitlist.append(BCASH);
     unitlist.append(mBCASH);
     unitlist.append(uBCASH);
-    unitlist.append(duffs);
+    unitlist.append(tiks);
     return unitlist;
 }
 
@@ -33,7 +34,7 @@ bool BitcoinUnits::valid(int unit)
     case BCASH:
     case mBCASH:
     case uBCASH:
-    case duffs:
+    case tiks:
         return true;
     default:
         return false;
@@ -49,7 +50,7 @@ QString BitcoinUnits::name(int unit)
             case BCASH: return QString("BCASH");
             case mBCASH: return QString("mBCASH");
             case uBCASH: return QString::fromUtf8("μBCASH");
-            case duffs: return QString("duffs");
+            case tiks: return QString("tiks");
             default: return QString("???");
         }
     }
@@ -60,7 +61,7 @@ QString BitcoinUnits::name(int unit)
             case BCASH: return QString("tBCASH");
             case mBCASH: return QString("mtBCASH");
             case uBCASH: return QString::fromUtf8("μtBCASH");
-            case duffs: return QString("tduffs");
+            case tiks: return QString("ttiks");
             default: return QString("???");
         }
     }
@@ -75,7 +76,7 @@ QString BitcoinUnits::description(int unit)
             case BCASH: return QString("BCash");
             case mBCASH: return QString("Milli-BCash (1 / 1" THIN_SP_UTF8 "000)");
             case uBCASH: return QString("Micro-BCash (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-            case duffs: return QString("Ten Nano-BCash (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case tiks: return QString("Ten Nano-BCash (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
     }
@@ -86,7 +87,7 @@ QString BitcoinUnits::description(int unit)
             case BCASH: return QString("TestBCashs");
             case mBCASH: return QString("Milli-TestBCash (1 / 1" THIN_SP_UTF8 "000)");
             case uBCASH: return QString("Micro-TestBCash (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-            case duffs: return QString("Ten Nano-TestBCash (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            case tiks: return QString("Ten Nano-TestBCash (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
             default: return QString("???");
         }
     }
@@ -99,7 +100,7 @@ qint64 BitcoinUnits::factor(int unit)
     case BCASH:  return 100000000;
     case mBCASH: return 100000;
     case uBCASH: return 100;
-    case duffs: return 1;
+    case tiks: return 1;
     default:   return 100000000;
     }
 }
@@ -111,7 +112,7 @@ int BitcoinUnits::decimals(int unit)
     case BCASH: return 8;
     case mBCASH: return 5;
     case uBCASH: return 2;
-    case duffs: return 0;
+    case tiks: return 0;
     default: return 0;
     }
 }

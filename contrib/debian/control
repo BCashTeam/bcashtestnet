@@ -1,8 +1,8 @@
 Source: bcash
 Section: utils
 Priority: optional
-Maintainer: Holger Schinzel <holger@bcash.org>
-Uploaders: Holger Schinzel <holger@bcash.org>
+Maintainer: Holger Schinzel <holger@bcashpay.org>
+Uploaders: Holger Schinzel <holger@bcashpay.org>
 Build-Depends: debhelper,
  devscripts,
  automake,
@@ -12,21 +12,19 @@ Build-Depends: debhelper,
  libssl-dev,
  pkg-config,
  libevent-dev,
- libboost-system1.48-dev | libboost-system-dev (>> 1.47),
- libboost-filesystem1.48-dev | libboost-filesystem-dev (>> 1.47),
- libboost-program-options1.48-dev | libboost-program-options-dev (>> 1.47),
- libboost-thread1.48-dev | libboost-thread-dev (>> 1.47),
- libboost-test1.48-dev | libboost-test-dev (>> 1.47),
- libboost-chrono1.48-dev | libboost-chrono-dev (>> 1.47),
- libminiupnpc8-dev | libminiupnpc-dev,
- qt4-qmake, libqt4-dev,
- qttools5-dev-tools, qttools5-dev,
+ libboost-system1.48-dev | libboost-system-dev (>> 1.35),
+ libboost-filesystem1.48-dev | libboost-filesystem-dev (>> 1.35),
+ libboost-program-options1.48-dev | libboost-program-options-dev (>> 1.35),
+ libboost-thread1.48-dev | libboost-thread-dev (>> 1.35),
+ libboost-test1.48-dev | libboost-test-dev (>> 1.35),
+ libboost-chrono1.48-dev | libboost-chrono-dev (>> 1.35),
+ qt4-qmake,
+ libqt4-dev,
  libqrencode-dev,
  libprotobuf-dev, protobuf-compiler,
- python,
- libzmq3-dev
+ python
 Standards-Version: 3.9.2
-Homepage: https://www.bcash.org/
+Homepage: https://www.bcashpay.org/
 Vcs-Git: git://github.com/bcashpay/bcash.git
 Vcs-Browser: https://github.com/bcashpay/bcash
 
@@ -37,7 +35,7 @@ Description: peer-to-peer network based digital currency - daemon
  BCash is an experimental new digital currency that enables anonymous, instant
  payments to anyone, anywhere in the world. BCash uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. BCash Core
+ and issuing money are carried out collectively by the network. BCash
  is the name of the open source software which enables the use of this currency.
  .
  This package provides the daemon, bcashd, and the CLI tool
@@ -50,7 +48,7 @@ Description: peer-to-peer network based digital currency - Qt GUI
  BCash is an experimental new digital currency that enables anonymous, instant
  payments to anyone, anywhere in the world. BCash uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. BCash Core
+ and issuing money are carried out collectively by the network. BCash
  is the name of the open source software which enables the use of this currency.
  .
  This package provides BCash-Qt, a GUI for BCash based on Qt.
@@ -62,7 +60,7 @@ Description: peer-to-peer digital currency - standalone transaction tool
  BCash is an experimental new digital currency that enables anonymous, instant
  payments to anyone, anywhere in the world. BCash uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. BCash Core
+ and issuing money are carried out collectively by the network. BCash
  is the name of the open source software which enables the use of this currency.
  .
  This package provides bcash-tx, a command-line transaction creation

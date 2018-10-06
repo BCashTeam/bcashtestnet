@@ -25,12 +25,12 @@ the bad alert.
 
 void ThreadSendAlert(CConnman& connman)
 {
-    if (!IsArgSet("-sendalert") && !IsArgSet("-printalert"))
+    if (!mapArgs.count("-sendalert") && !mapArgs.count("-printalert"))
         return;
 
     // Wait one minute so we get well connected. If we only need to print
     // but not to broadcast - do this right away.
-    if (IsArgSet("-sendalert"))
+    if (mapArgs.count("-sendalert"))
         MilliSleep(60*1000);
 
     //
@@ -57,10 +57,10 @@ void ThreadSendAlert(CConnman& connman)
     //  Higher numbers mean higher priority
     alert.nPriority     = 5000;
     alert.strComment    = "";
-    alert.strStatusBar  = "URGENT: Upgrade required: see https://www.bcash.org";
+    alert.strStatusBar  = "URGENT: Upgrade required: see https://www.bcashpay.org";
 
     // Set specific client version/versions here. If setSubVer is empty, no filtering on subver is done:
-    // alert.setSubVer.insert(std::string("/BCash Core:0.12.0.58/"));
+    // alert.setSubVer.insert(std::string("/BCash:0.12.0.58/"));
 
     // Sign
     if(!alert.Sign())
@@ -89,7 +89,7 @@ void ThreadSendAlert(CConnman& connman)
     printf("vchSig=%s\n", HexStr(alert2.vchSig).c_str());
 
     // Confirm
-    if (!IsArgSet("-sendalert"))
+    if (!mapArgs.count("-sendalert"))
         return;
     while (connman.GetNodeCount(CConnman::CONNECTIONS_ALL) == 0 && !ShutdownRequested())
         MilliSleep(500);

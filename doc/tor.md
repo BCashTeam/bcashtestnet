@@ -1,19 +1,19 @@
 TOR SUPPORT IN BCASH CORE
 =======================
 
-It is possible to run BCash Core as a Tor hidden service, and connect to such services.
+It is possible to run BCash as a Tor hidden service, and connect to such services.
 
 The following directions assume you have a Tor proxy running on port 9050. Many
 distributions default to having a SOCKS proxy listening on port 9050, but others
-may not. In particular, the Tor Browser Bundle defaults to listening on port 9150.
-See [Tor Project FAQ:TBBSocksPort](https://www.torproject.org/docs/faq.html.en#TBBSocksPort)
+may not. In particular, the Tor Browser Bundle defaults to listening on a random
+port. See [Tor Project FAQ:TBBSocksPort](https://www.torproject.org/docs/faq.html.en#TBBSocksPort)
 for how to properly configure Tor.
 
 
-1. Run BCash Core behind a Tor proxy
+1. Run BCash behind a Tor proxy
 ----------------------------------
 
-The first step is running BCash Core behind a Tor proxy. This will already make all
+The first step is running BCash behind a Tor proxy. This will already make all
 outgoing connections be anonymized, but more is possible.
 
 	-proxy=ip:port  Set the proxy server. If SOCKS5 is selected (default), this proxy
@@ -44,7 +44,7 @@ In a typical situation, this suffices to run behind a Tor proxy:
 	./bcashd -proxy=127.0.0.1:9050
 
 
-2. Run a BCash Core hidden server
+2. Run a BCash hidden server
 -------------------------------
 
 If you configure your Tor system accordingly, it is possible to make your node also
@@ -52,13 +52,13 @@ reachable from the Tor network. Add these lines to your /etc/tor/torrc (or equiv
 config file):
 
 	HiddenServiceDir /var/lib/tor/bcashcore-service/
-	HiddenServicePort 19902 127.0.0.1:19902
-	HiddenServicePort 19903 127.0.0.1:19903
+	HiddenServicePort 9999 127.0.0.1:9999
+	HiddenServicePort 19999 127.0.0.1:19999
 
 The directory can be different of course, but (both) port numbers should be equal to
-your bcashd's P2P listen port (19902 by default).
+your bcashd's P2P listen port (9999 by default).
 
-	-externalip=X   You can tell BCash Core about its publicly reachable address using
+	-externalip=X   You can tell BCash about its publicly reachable address using
 	                this option, and this can be a .onion address. Given the above
 	                configuration, you can find your onion address in
 	                /var/lib/tor/bcashcore-service/hostname. Onion addresses are given
@@ -99,7 +99,7 @@ for normal IPv4/IPv6 communication, use:
 	./bcashd -onion=127.0.0.1:9050 -externalip=ssapp53tmftyjmjb.onion -discover
 
 
-3. List of known BCash Core Tor relays
+3. List of known BCash Tor relays
 ------------------------------------
 
 * [darkcoinie7ghp67.onion](http://darkcoinie7ghp67.onion/)
@@ -120,33 +120,14 @@ for normal IPv4/IPv6 communication, use:
 
 Starting with Tor version 0.2.7.1 it is possible, through Tor's control socket
 API, to create and destroy 'ephemeral' hidden services programmatically.
-BCash Core has been updated to make use of this.
+BCash has been updated to make use of this.
 
-This means that if Tor is running (and proper authentication has been configured),
-BCash Core automatically creates a hidden service to listen on. This will positively 
-affect the number of available .onion nodes.
+This means that if Tor is running (and proper authorization is available),
+BCash automatically creates a hidden service to listen on, without
+manual configuration. This will positively affect the number of available
+.onion nodes.
 
-This new feature is enabled by default if BCash Core is listening (`-listen`), and
-requires a Tor connection to work. It can be explicitly disabled with `-listenonion=0`
-and, if not disabled, configured using the `-torcontrol` and `-torpassword` settings.
-To show verbose debugging information, pass `-debug=tor`.
-
-Connecting to Tor's control socket API requires one of two authentication methods to be 
-configured. For cookie authentication the user running bcashd must have write access 
-to the `CookieAuthFile` specified in Tor configuration. In some cases this is 
-preconfigured and the creation of a hidden service is automatic. If permission problems 
-are seen with `-debug=tor` they can be resolved by adding both the user running tor and 
-the user running bcashd to the same group and setting permissions appropriately. On 
-Debian-based systems the user running bcashd can be added to the debian-tor group, 
-which has the appropriate permissions. An alternative authentication method is the use 
-of the `-torpassword` flag and a `hash-password` which can be enabled and specified in 
-Tor configuration.
-
-4. Privacy recommendations
----------------------------
-
-- Do not add anything but bitcoin ports to the hidden service created in section 2.
-  If you run a web service too, create a new hidden service for that.
-  Otherwise it is trivial to link them, which may reduce privacy. Hidden
-  services created automatically (as in section 3) always have only one port
-  open.
+This new feature is enabled by default if BCash is listening, and
+a connection to Tor can be made. It can be configured with the `-listenonion`,
+`-torcontrol` and `-torpassword` settings. To show verbose debugging
+information, pass `-debug=tor`.

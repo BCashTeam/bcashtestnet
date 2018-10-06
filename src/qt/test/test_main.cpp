@@ -1,5 +1,6 @@
-// Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2014-2017 The BCash Core developers
+// Copyright (c) 2009-2015 The Bitcoin Core developers
+// Copyright (c) 2014-2018 The Dash developers
+// Copyright (c) 2018-2018 The BCash developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -7,9 +8,6 @@
 #include "config/bcash-config.h"
 #endif
 
-#include "chainparams.h"
-#include "key.h"
-#include "rpcnestedtests.h"
 #include "util.h"
 #include "uritests.h"
 #include "compattests.h"
@@ -33,17 +31,10 @@ Q_IMPORT_PLUGIN(qtwcodecs)
 Q_IMPORT_PLUGIN(qkrcodecs)
 #endif
 
-extern void noui_connect();
-
 // This is all you need to run all the tests
 int main(int argc, char *argv[])
 {
-    ECC_Start();
     SetupEnvironment();
-    SetupNetworking();
-    SelectParams(CBaseChainParams::MAIN);
-    noui_connect();
-
     bool fInvalid = false;
 
     // Don't remove this, it's needed to access
@@ -61,10 +52,6 @@ int main(int argc, char *argv[])
     if (QTest::qExec(&test2) != 0)
         fInvalid = true;
 #endif
-    RPCNestedTests test3;
-    if (QTest::qExec(&test3) != 0)
-        fInvalid = true;
-
     CompatTests test4;
     if (QTest::qExec(&test4) != 0)
         fInvalid = true;
@@ -72,6 +59,6 @@ int main(int argc, char *argv[])
     TrafficGraphDataTests test5;
     if (QTest::qExec(&test5) != 0)
         fInvalid = true;
-    ECC_Stop();
+
     return fInvalid;
 }

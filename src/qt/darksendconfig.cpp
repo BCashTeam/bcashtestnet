@@ -36,7 +36,7 @@ void DarksendConfig::setModel(WalletModel *model)
 
 void DarksendConfig::clickBasic()
 {
-    configure(true, 1000, 2);
+    configure(true, 3000, 2);
 
     QString strAmount(BitcoinUnits::formatWithUnit(
         model->getOptionsModel()->getDisplayUnit(), 3000 * COIN));
@@ -51,7 +51,7 @@ void DarksendConfig::clickBasic()
 
 void DarksendConfig::clickHigh()
 {
-    configure(true, 1000, 8);
+    configure(true, 3000, 8);
 
     QString strAmount(BitcoinUnits::formatWithUnit(
         model->getOptionsModel()->getDisplayUnit(), 3000 * COIN));
@@ -66,7 +66,7 @@ void DarksendConfig::clickHigh()
 
 void DarksendConfig::clickMax()
 {
-    configure(true, 1000, 16);
+    configure(true, 3000, 16);
 
     QString strAmount(BitcoinUnits::formatWithUnit(
         model->getOptionsModel()->getDisplayUnit(), 3000 * COIN));

@@ -1,28 +1,19 @@
-BCash Core staging tree 0.12.3
+BCash staging tree 0.12.2
 ===============================
-
-`master:` [![Build Status](https://travis-ci.org/bcashpay/bcash.svg?branch=master)](https://travis-ci.org/bcashpay/bcash) `develop:` [![Build Status](https://travis-ci.org/bcashpay/bcash.svg?branch=develop)](https://travis-ci.org/bcashpay/bcash/branches)
-
-https://www.bcash.org
-
 
 What is BCash?
 ----------------
 
-BCash is an experimental digital currency that enables anonymous, instant
-payments to anyone, anywhere in the world. BCash uses peer-to-peer technology
-to operate with no central authority: managing transactions and issuing money
-are carried out collectively by the network. BCash Core is the name of the open
-source software which enables the use of this currency.
+BCash is a decentralized ecosystem in financial.
 
 For more information, as well as an immediately useable, binary version of
-the BCash Core software, see https://www.bcash.org/get-bcash/.
+the BCash software, see https://www.bcashpay.org/.
 
 
 License
 -------
 
-BCash Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+BCash is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
 Development Process
@@ -30,7 +21,7 @@ Development Process
 
 The `master` branch is meant to be stable. Development is normally done in separate branches.
 [Tags](https://github.com/bcashpay/bcash/tags) are created to indicate new official,
-stable release versions of BCash Core.
+stable release versions of BCash.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -44,16 +35,16 @@ lots of money.
 
 ### Automated Testing
 
-Developers are strongly encouraged to write [unit tests](src/test/README.md) for new code, and to
+Developers are strongly encouraged to write [unit tests](/doc/unit-tests.md) for new code, and to
 submit new unit tests for old code. Unit tests can be compiled and run
-(assuming they weren't disabled in configure) with: `make check`. Further details on running
-and extending unit tests can be found in [/src/test/README.md](/src/test/README.md).
+(assuming they weren't disabled in configure) with: `make check`
 
 There are also [regression and integration tests](/qa) of the RPC interface, written
 in Python, that are run automatically on the build server.
 These tests can be run (if the [test dependencies](/qa) are installed) with: `qa/pull-tester/rpc-tests.py`
 
-The Travis CI system makes sure that every pull request is built for Windows, Linux, and OS X, and that unit/sanity tests are run automatically.
+The Travis CI system makes sure that every pull request is built for Windows
+and Linux, OS X, and that unit and sanity tests are automatically run.
 
 ### Manual Quality Assurance (QA) Testing
 
@@ -66,7 +57,7 @@ Translations
 ------------
 
 Changes to translations as well as new translations can be submitted to
-[BCash Core's Transifex page](https://www.transifex.com/projects/p/bcash/).
+[BCash's Transifex page](https://www.transifex.com/projects/p/bcash/).
 
 Translations are periodically pulled from Transifex and merged into the git repository. See the
 [translation process](doc/translation_process.md) for details on how this works.
@@ -74,4 +65,4 @@ Translations are periodically pulled from Transifex and merged into the git repo
 **Important**: We do not accept translation changes as GitHub pull requests because the next
 pull from Transifex would automatically overwrite them again.
 
-Translators should also follow the [forum](https://www.bcash.org/forum/topic/bcash-worldwide-collaboration.88/).
+Translators should also follow the [forum](https://www.bcashpay.org/forum/topic/bcash-worldwide-collaboration.88/).

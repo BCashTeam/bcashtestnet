@@ -743,16 +743,16 @@ QDialog#HelpMessageDialog QScrollBar:vertical, QDialog#HelpMessageDialog QScroll
 border:0;
 }
 
-/* About BCash Dialog */
+/* About BCASH Dialog */
 QDialog#AboutDialog {
 background-color:#F8F6F6;
 }
 
-QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About BCash Contents */
+QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About BCASH Contents */
 margin-left:10px;
 }
 
-QDialog#AboutDialog QLabel#label_2 { /* Margin for About BCash text */
+QDialog#AboutDialog QLabel#label_2 { /* Margin for About BCASH text */
 margin-right:10px;
 }
 
@@ -1109,7 +1109,7 @@ min-width:410px;
 margin-right:20px;
 margin-left:0;
 margin-top:15px;
-background-image: url(':/images/light/bcash_logo_horizontal');
+background-image: url(':/images/light/dash_logo_horizontal');
 background-repeat:none;
 }
 
@@ -1591,16 +1591,6 @@ background-color:#F8F6F6;
 }
 
 QDialog#ReceiveRequestDialog QTextEdit { /* Contents of Receive Coin Dialog */
-border:1px solid #d7d7d7;
-}
-
-/* General QR-code DIALOG */
-
-QDialog#QRDialog {
-background-color:#F8F6F6;
-}
-
-QDialog#QRDialog QTextEdit { /* Contents of QR-code Dialog */
 border:1px solid #d7d7d7;
 }
 

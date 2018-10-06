@@ -1,4 +1,5 @@
-// Copyright (c) 2014-2017 The BCash Core developers
+// Copyright (c) 2014-2018 The Dash developers
+// Copyright (c) 2018-2018 The BCash developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,27 +21,27 @@ CGovernanceObjectVoteFile::CGovernanceObjectVoteFile(const CGovernanceObjectVote
 
 void CGovernanceObjectVoteFile::AddVote(const CGovernanceVote& vote)
 {
-    uint256 nHash = vote.GetHash();
-    // make sure to never add/update already known votes
-    if (HasVote(nHash))
-        return;
     listVotes.push_front(vote);
-    mapVoteIndex.emplace(nHash, listVotes.begin());
+    mapVoteIndex[vote.GetHash()] = listVotes.begin();
     ++nMemoryVotes;
 }
 
 bool CGovernanceObjectVoteFile::HasVote(const uint256& nHash) const
 {
-    return mapVoteIndex.find(nHash) != mapVoteIndex.end();
+    vote_m_cit it = mapVoteIndex.find(nHash);
+    if(it == mapVoteIndex.end()) {
+        return false;
+    }
+    return true;
 }
 
-bool CGovernanceObjectVoteFile::SerializeVoteToStream(const uint256& nHash, CDataStream& ss) const
+bool CGovernanceObjectVoteFile::GetVote(const uint256& nHash, CGovernanceVote& vote) const
 {
     vote_m_cit it = mapVoteIndex.find(nHash);
     if(it == mapVoteIndex.end()) {
         return false;
     }
-    ss << *(it->second);
+    vote = *(it->second);
     return true;
 }
 
@@ -66,6 +67,14 @@ void CGovernanceObjectVoteFile::RemoveVotesFromMasternode(const COutPoint& outpo
             ++it;
         }
     }
+}
+
+CGovernanceObjectVoteFile& CGovernanceObjectVoteFile::operator=(const CGovernanceObjectVoteFile& other)
+{
+    nMemoryVotes = other.nMemoryVotes;
+    listVotes = other.listVotes;
+    RebuildIndex();
+    return *this;
 }
 
 void CGovernanceObjectVoteFile::RebuildIndex()

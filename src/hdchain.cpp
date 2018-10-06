@@ -1,4 +1,5 @@
-// Copyright (c) 2014-2017 The BCash Core developers
+// Copyright (c) 2014-2018 The Dash developers
+// Copyright (c) 2018-2018 The BCash developers
 // Distributed under the MIT software license, see the accompanying
 
 #include "base58.h"
@@ -39,7 +40,7 @@ bool CHDChain::IsCrypted() const
     return fCrypted;
 }
 
-void CHDChain::Debug(const std::string& strName) const
+void CHDChain::Debug(std::string strName) const
 {
     DBG(
         std::cout << __func__ << ": ---" << strName << "---" << std::endl;

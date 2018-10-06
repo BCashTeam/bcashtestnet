@@ -8,7 +8,6 @@
         <file alias="fr">locale/bcash_fr.qm</file>
         <file alias="it">locale/bcash_it.qm</file>
         <file alias="ja">locale/bcash_ja.qm</file>
-        <file alias="nl">locale/bcash_nl.qm</file>
         <file alias="pl">locale/bcash_pl.qm</file>
         <file alias="pt">locale/bcash_pt.qm</file>
         <file alias="ru">locale/bcash_ru.qm</file>

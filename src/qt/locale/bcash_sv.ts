@@ -219,8 +219,8 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <source>BCash Core</source>
-        <translation>BCash Core
+        <source>BCash</source>
+        <translation>BCash
 </translation>
     </message>
     <message>
@@ -272,8 +272,8 @@
         <translation>Avsluta applikationen</translation>
     </message>
     <message>
-        <source>&amp;About BCash Core</source>
-        <translation>&amp;Om BCash Core</translation>
+        <source>&amp;About BCash</source>
+        <translation>&amp;Om BCash</translation>
     </message>
     <message>
         <source>About &amp;Qt</source>
@@ -412,8 +412,8 @@
         <translation>&amp;Kommandoradalternativ</translation>
     </message>
     <message>
-        <source>Show the BCash Core help message to get a list with possible BCash command-line options</source>
-        <translation>Visa BCash Core-hjälpmeddelandet för att få en lista med möjliga BCash-kommandoradalternativ</translation>
+        <source>Show the BCash help message to get a list with possible BCash command-line options</source>
+        <translation>Visa BCash-hjälpmeddelandet för att få en lista med möjliga BCash-kommandoradalternativ</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -758,28 +758,28 @@ Adress: %4
         <translation>Vänligen välj en integritetsnivå.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 1000 BCASH</source>
-        <translation>Använd 2 enskilda masternoder för att mixa medel upp till 1000 BCASH</translation>
+        <source>Use 2 separate masternodes to mix funds up to 3000 BCASH</source>
+        <translation>Använd 2 enskilda masternoder för att mixa medel upp till 3000 BCASH</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 1000 BCASH</source>
-        <translation>Använd 8 enskilda masternoder för att mixa medel upp till 1000 BCASH.</translation>
+        <source>Use 8 separate masternodes to mix funds up to 3000 BCASH</source>
+        <translation>Använd 8 enskilda masternoder för att mixa medel upp till 3000 BCASH.</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Använd 16 enskilda masternoder</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 BCASH to anonymize 1000 BCASH</source>
-        <translation>Detta alternativ är det snabbaste och kommer att kosta omkring ~0,025 BCASH för att anonymisera 1000 BCASH</translation>
+        <source>This option is the quickest and will cost about ~0.025 BCASH to anonymize 3000 BCASH</source>
+        <translation>Detta alternativ är det snabbaste och kommer att kosta omkring ~0,025 BCASH för att anonymisera 3000 BCASH</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 BCASH to anonymize 1000 BCASH</source>
-        <translation>Detta alternativ är relativt snabbt och kommer att kosta omkring 0,05 BCASH för att anonymisera 1000 BCASH</translation>
+        <source>This option is moderately fast and will cost about 0.05 BCASH to anonymize 3000 BCASH</source>
+        <translation>Detta alternativ är relativt snabbt och kommer att kosta omkring 0,05 BCASH för att anonymisera 3000 BCASH</translation>
     </message>
     <message>
-        <source>0.1 BCASH per 1000 BCASH you anonymize.</source>
-        <translation>0,1 BCASH per 1000 BCASH du anonymiserar.</translation>
+        <source>0.1 BCASH per 3000 BCASH you anonymize.</source>
+        <translation>0,1 BCASH per 3000 BCASH du anonymiserar.</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
@@ -883,8 +883,8 @@ Adress: %4
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>BCash Core</source>
-        <translation>BCash Core
+        <source>BCash</source>
+        <translation>BCash
 </translation>
     </message>
     <message>
@@ -931,16 +931,16 @@ Adress: %4
         <translation>Välkommen</translation>
     </message>
     <message>
-        <source>Welcome to BCash Core.</source>
-        <translation>Välkommen till BCash Core.</translation>
+        <source>Welcome to BCash.</source>
+        <translation>Välkommen till BCash.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where BCash Core will store its data.</source>
-        <translation>Då detta är första gången programmet startas kan du välja var BCash Core ska lagra sin data.</translation>
+        <source>As this is the first time the program is launched, you can choose where BCash will store its data.</source>
+        <translation>Då detta är första gången programmet startas kan du välja var BCash ska lagra sin data.</translation>
     </message>
     <message>
-        <source>BCash Core will download and store a copy of the BCash block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>BCash Core kommer att laddas ned och lagra en kopia av BCash:s blockkedja. Minst %1 GB data kommer att lagras i denna katalog och den kommer att växa med tiden. Plånboken kommer också att lagras i denna katalog.</translation>
+        <source>BCash will download and store a copy of the BCash block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>BCash kommer att laddas ned och lagra en kopia av BCash:s blockkedja. Minst %1 GB data kommer att lagras i denna katalog och den kommer att växa med tiden. Plånboken kommer också att lagras i denna katalog.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1985,8 +1985,8 @@ https://www.transifex.com/projects/p/bcash/</translation>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>BCash Core is shutting down...</source>
-        <translation>BCash Core stängs ned...</translation>
+        <source>BCash is shutting down...</source>
+        <translation>BCash stängs ned...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2127,8 +2127,8 @@ https://www.transifex.com/projects/p/bcash/</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>BCash Core</source>
-        <translation>BCash Core
+        <source>BCash</source>
+        <translation>BCash
 </translation>
     </message>
     <message>
@@ -2140,8 +2140,8 @@ https://www.transifex.com/projects/p/bcash/</translation>
         <translation>Bitcoin Core-utvecklarna</translation>
     </message>
     <message>
-        <source>The BCash Core developers</source>
-        <translation>BCash Core-utvecklarna</translation>
+        <source>The BCash developers</source>
+        <translation>BCash-utvecklarna</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2662,8 +2662,8 @@ https://www.transifex.com/projects/p/bcash/</translation>
         <translation>Sammanbind till fastställd adress och avlyssna alltid den. Använd [host]:port-notation för IPv6</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. BCash Core is probably already running.</source>
-        <translation>Kan inte erhålla ett lås på datakatalog %s. BCash Core körs förmodligen redan.</translation>
+        <source>Cannot obtain a lock on data directory %s. BCash is probably already running.</source>
+        <translation>Kan inte erhålla ett lås på datakatalog %s. BCash körs förmodligen redan.</translation>
     </message>
     <message>
         <source>Darksend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
@@ -2718,16 +2718,16 @@ https://www.transifex.com/projects/p/bcash/</translation>
         <translation>Detta är en förhandsutgiven testkompilering - använd på egen risk - använd inte för utvinning eller handlarapplikationer.</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. BCash Core is probably already running.</source>
-        <translation>Det går inte att binda till %s till denna dator. BCash Core körs förmodligen redan.</translation>
+        <source>Unable to bind to %s on this computer. BCash is probably already running.</source>
+        <translation>Det går inte att binda till %s till denna dator. BCash körs förmodligen redan.</translation>
     </message>
     <message>
         <source>Unable to locate enough Darksend denominated funds for this transaction.</source>
         <translation>Kunde inte hitta tillräckliga Darksend-denominationsmedel för denna transaktion.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 BCASH.</source>
-        <translation>Kunde inte hitta tillräckliga Darksend-icke-denominationsmedel för denna transaktion som inte är likvärdiga 1000 BCASH.</translation>
+        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 3000 BCASH.</source>
+        <translation>Kunde inte hitta tillräckliga Darksend-icke-denominationsmedel för denna transaktion som inte är likvärdiga 3000 BCASH.</translation>
     </message>
     <message>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
@@ -2942,8 +2942,8 @@ https://www.transifex.com/projects/p/bcash/</translation>
         <translation>Information</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. BCash Core is shutting down.</source>
-        <translation>Initialiseringstillståndkontroll misslyckades. BCash Core stängs ned.</translation>
+        <source>Initialization sanity check failed. BCash is shutting down.</source>
+        <translation>Initialiseringstillståndkontroll misslyckades. BCash stängs ned.</translation>
     </message>
     <message>
         <source>Input is not valid.</source>

@@ -1,8 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=BCash Core
+Name=BCash
 Comment=BCash P2P Cryptocurrency
-Comment[de]=Verbinde mit dem BCash peer-to-peer Netzwerk
 Comment[fr]=BCash, monnaie virtuelle cryptographique pair à pair
 Comment[tr]=BCash, eşten eşe kriptografik sanal para birimi
 Exec=bcash-qt %u

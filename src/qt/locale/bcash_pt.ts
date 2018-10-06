@@ -231,8 +231,8 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <source>BCash Core</source>
-        <translation>BCash Core</translation>
+        <source>BCash</source>
+        <translation>BCash</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -283,12 +283,12 @@
         <translation>Sair da aplicação</translation>
     </message>
     <message>
-        <source>&amp;About BCash Core</source>
-        <translation>&amp;Acerca do BCash Core</translation>
+        <source>&amp;About BCash</source>
+        <translation>&amp;Acerca do BCash</translation>
     </message>
     <message>
-        <source>Show information about BCash Core</source>
-        <translation>Mostra informação acerca do BCash Core</translation>
+        <source>Show information about BCash</source>
+        <translation>Mostra informação acerca do BCash</translation>
     </message>
     <message>
         <source>About &amp;Qt</source>
@@ -451,16 +451,16 @@
         <translation>Opções de linha de &amp;comandos</translation>
     </message>
     <message>
-        <source>BCash Core client</source>
-        <translation>Cliente BCash Core</translation>
+        <source>BCash client</source>
+        <translation>Cliente BCash</translation>
     </message>
     <message numerus="yes">
         <source>Processed %n blocks of transaction history.</source>
         <translation><numerusform>%n bloco do histórico de transacções processado.</numerusform><numerusform>%n blocos do histórico de transacções processados.</numerusform></translation>
     </message>
     <message>
-        <source>Show the BCash Core help message to get a list with possible BCash command-line options</source>
-        <translation>Mostra a mensagem de ajuda do BCash Core para obter a lista com as possíveis opções de linha de comandos</translation>
+        <source>Show the BCash help message to get a list with possible BCash command-line options</source>
+        <translation>Mostra a mensagem de ajuda do BCash para obter a lista com as possíveis opções de linha de comandos</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -860,11 +860,11 @@ Endereço: %4
         <translation>Por favor seleccione um nível de privacidade.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 1000 BCASH</source>
+        <source>Use 2 separate masternodes to mix funds up to 3000 BCASH</source>
         <translation>Usar 2 masternodes distintos para misturar os fundos até 1000DRK</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 1000 BCASH</source>
+        <source>Use 8 separate masternodes to mix funds up to 3000 BCASH</source>
         <translation>Usar 8 masternodes distintos para misturar os fundos até 1000DRK</translation>
     </message>
     <message>
@@ -872,16 +872,16 @@ Endereço: %4
         <translation>Usar 16 masternodes</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 BCASH to anonymize 1000 BCASH</source>
-        <translation>Esta opção é a mais rápida e irá custar cerca de ~0.025 BCASH para anonimizar 1000 BCASH</translation>
+        <source>This option is the quickest and will cost about ~0.025 BCASH to anonymize 3000 BCASH</source>
+        <translation>Esta opção é a mais rápida e irá custar cerca de ~0.025 BCASH para anonimizar 3000 BCASH</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 BCASH to anonymize 1000 BCASH</source>
-        <translation>Esta opção é relativamente rápida e irá custar cerca de ~0.05 BCASH para anonimizar 1000 BCASH</translation>
+        <source>This option is moderately fast and will cost about 0.05 BCASH to anonymize 3000 BCASH</source>
+        <translation>Esta opção é relativamente rápida e irá custar cerca de ~0.05 BCASH para anonimizar 3000 BCASH</translation>
     </message>
     <message>
-        <source>0.1 BCASH per 1000 BCASH you anonymize.</source>
-        <translation>0.1 BCASH por cada 1000 BCASH a anonimizar.</translation>
+        <source>0.1 BCASH per 3000 BCASH you anonymize.</source>
+        <translation>0.1 BCASH por cada 3000 BCASH a anonimizar.</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
@@ -985,8 +985,8 @@ Endereço: %4
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>BCash Core</source>
-        <translation>BCash Core</translation>
+        <source>BCash</source>
+        <translation>BCash</translation>
     </message>
     <message>
         <source>version</source>
@@ -997,8 +997,8 @@ Endereço: %4
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About BCash Core</source>
-        <translation>Acerca do BCash Core</translation>
+        <source>About BCash</source>
+        <translation>Acerca do BCash</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1044,16 +1044,16 @@ Endereço: %4
         <translation>Bem-vindo</translation>
     </message>
     <message>
-        <source>Welcome to BCash Core.</source>
-        <translation>Bem-vindo ao BCash Core.</translation>
+        <source>Welcome to BCash.</source>
+        <translation>Bem-vindo ao BCash.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where BCash Core will store its data.</source>
-        <translation>Como esta é a primeira vez que o programa é executado, pode escolher onde o cliente BCash Core irá guardar os seus dados.</translation>
+        <source>As this is the first time the program is launched, you can choose where BCash will store its data.</source>
+        <translation>Como esta é a primeira vez que o programa é executado, pode escolher onde o cliente BCash irá guardar os seus dados.</translation>
     </message>
     <message>
-        <source>BCash Core will download and store a copy of the BCash block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>O cliente BCash Core irá descarregar e guardar uma copia da cadeia de blocos BCash. Pelo menos %1GB de dados serão guardados nesta pasta e irá aumentar com o tempo. A carteira também ficará guardada nesta pasta.</translation>
+        <source>BCash will download and store a copy of the BCash block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>O cliente BCash irá descarregar e guardar uma copia da cadeia de blocos BCash. Pelo menos %1GB de dados serão guardados nesta pasta e irá aumentar com o tempo. A carteira também ficará guardada nesta pasta.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1064,8 +1064,8 @@ Endereço: %4
         <translation>Usar uma pasta de dados personalizada</translation>
     </message>
     <message>
-        <source>BCash Core</source>
-        <translation>BCash Core</translation>
+        <source>BCash</source>
+        <translation>BCash</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -2570,8 +2570,8 @@ https://www.transifex.com/projects/p/bcash/</translation>
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>BCash Core is shutting down...</source>
-        <translation>O BCash Core está a desligar...</translation>
+        <source>BCash is shutting down...</source>
+        <translation>O BCash está a desligar...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2720,8 +2720,8 @@ https://www.transifex.com/projects/p/bcash/</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>BCash Core</source>
-        <translation>BCash Core</translation>
+        <source>BCash</source>
+        <translation>BCash</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -2732,8 +2732,8 @@ https://www.transifex.com/projects/p/bcash/</translation>
         <translation>Os programadores Bitcoin Core</translation>
     </message>
     <message>
-        <source>The BCash Core developers</source>
-        <translation>Os programadores BCash Core</translation>
+        <source>The BCash developers</source>
+        <translation>Os programadores BCash</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -3310,8 +3310,8 @@ https://www.transifex.com/projects/p/bcash/</translation>
         <translation>Vincular a um determinado endereço e ouvir sempre aí. Use a notação [endereço]:porta para IPv6</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. BCash Core is probably already running.</source>
-        <translation>Não foi possível obter acesso exclusivo à pasta de dados %s. Possivelmente o BCash Core já se encontra em execução.</translation>
+        <source>Cannot obtain a lock on data directory %s. BCash is probably already running.</source>
+        <translation>Não foi possível obter acesso exclusivo à pasta de dados %s. Possivelmente o BCash já se encontra em execução.</translation>
     </message>
     <message>
         <source>Darksend uses exact denominated amounts to send funds, you might simply need to anonymize some more coins.</source>
@@ -3366,15 +3366,15 @@ https://www.transifex.com/projects/p/bcash/</translation>
         <translation>Esta é uma compilação prévia de teste - use por sua conta e risco - não use para minar nem em aplicações comerciais</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. BCash Core is probably already running.</source>
-        <translation>Não foi possível vincular a %s neste computador. Provavelmente o BCash Core já está a ser executado.</translation>
+        <source>Unable to bind to %s on this computer. BCash is probably already running.</source>
+        <translation>Não foi possível vincular a %s neste computador. Provavelmente o BCash já está a ser executado.</translation>
     </message>
     <message>
         <source>Unable to locate enough Darksend denominated funds for this transaction.</source>
         <translation>Não foi possível localizar fundos Darksend denominados suficientes para esta transacção.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 BCASH.</source>
+        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 3000 BCASH.</source>
         <translation>Não foi possível localizar fundos Darksend não denominados suficientes para esta transacção que não sejam igual a 1000DRK.</translation>
     </message>
     <message>
@@ -3638,7 +3638,7 @@ https://www.transifex.com/projects/p/bcash/</translation>
         <translation>Este produto inclui software desenvolvido pelo Projecto OpenSSL para uso no OpenSSL Toolkit &lt;https://www.openssl.org/&gt;, software criptográfico escrito por Eric Young e software UPnP escrito por Thomas Bernard.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 1000 BCASH.</source>
+        <source>Unable to locate enough funds for this transaction that are not equal 3000 BCASH.</source>
         <translation>Não foi possível localizar fundos suficientes para esta transacção que não sejam igual a 1000DRK.</translation>
     </message>
     <message>
@@ -3650,8 +3650,8 @@ https://www.transifex.com/projects/p/bcash/</translation>
         <translation>Aviso: -maxtxfee é demasiado alta! Taxas deste tamanho podem ser pagas em apenas uma transacção.</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong BCash Core will not work properly.</source>
-        <translation>Aviso: Por favor verifique que a data e a hora do computador está correcta! Se o relógio estiver errado o BCash Core não vai funcionar correctamente.</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong BCash will not work properly.</source>
+        <translation>Aviso: Por favor verifique que a data e a hora do computador está correcta! Se o relógio estiver errado o BCash não vai funcionar correctamente.</translation>
     </message>
     <message>
         <source>(9999 could be used only on mainnet)</source>
@@ -3696,8 +3696,8 @@ https://www.transifex.com/projects/p/bcash/</translation>
         <translation>Copyright (C) 2009-%i The Bitcoin Core Developers</translation>
     </message>
     <message>
-        <source>Copyright (C) 2014-%i The BCash Core Developers</source>
-        <translation>Copyright (C) 2014-%i BCash Core Developers</translation>
+        <source>Copyright (C) 2014-%i The BCash Developers</source>
+        <translation>Copyright (C) 2014-%i BCash Developers</translation>
     </message>
     <message>
         <source>Could not parse -rpcbind value %s as network address</source>
@@ -3728,8 +3728,8 @@ https://www.transifex.com/projects/p/bcash/</translation>
         <translation>Erro conectando ao Masternode</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of BCash Core</source>
-        <translation>Erro carregando wallet.dat Carteira precisa de nova versão do BCash Core</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of BCash</source>
+        <translation>Erro carregando wallet.dat Carteira precisa de nova versão do BCash</translation>
     </message>
     <message>
         <source>Error: A fatal internal error occured, see debug.log for details</source>
@@ -3800,8 +3800,8 @@ https://www.transifex.com/projects/p/bcash/</translation>
         <translation>Informação</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. BCash Core is shutting down.</source>
-        <translation>A verificação de consistência no arranque falhou. O BCash Core está a encerrar.</translation>
+        <source>Initialization sanity check failed. BCash is shutting down.</source>
+        <translation>A verificação de consistência no arranque falhou. O BCash está a encerrar.</translation>
     </message>
     <message>
         <source>Input is not valid.</source>
@@ -4044,8 +4044,8 @@ https://www.transifex.com/projects/p/bcash/</translation>
         <translation>Utilize UPNP para mapear porta de escuta (default: %u)</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart BCash Core to complete</source>
-        <translation>Carteira necessita de ser re-escrita: reinicie BCash Core para completar</translation>
+        <source>Wallet needed to be rewritten: restart BCash to complete</source>
+        <translation>Carteira necessita de ser re-escrita: reinicie BCash para completar</translation>
     </message>
     <message>
         <source>Warning: Unsupported argument -benchmark ignored, use -debug=bench.</source>
