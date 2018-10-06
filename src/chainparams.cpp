@@ -599,44 +599,10 @@ public:
         nDefaultPort = 19994;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1538967600, 0, 0x207fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1538967600, 1, 0x207fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-		if(true && genesis.GetHash() != uint256S("0x"))
-		{
-			printf("Searching for genesis block...\n");
-			arith_uint256 hashTarget = arith_uint256().SetCompact(genesis.nBits);
 		
-			unsigned int nHashesDone = 0;
-
-			uint256 hash;
-			while (true)
-			{
-				//hash = genesis->GetHash();
-				hash = HashX11(BEGIN(genesis.nVersion), END(genesis.nNonce));
-				
-				if (UintToArith256(hash) <= hashTarget)
-				{
-					break;
-				}
-				if ((genesis.nNonce & 0xFFF) == 0)
-				{
-					printf("nonce %08X: hash = %s (target = %s)\n", genesis.nNonce, hash.ToString().c_str(), hashTarget.ToString().c_str());
-				}
-				++genesis.nNonce;
-				if (genesis.nNonce == 0)
-				{
-					printf("NONCE WRAPPED, incrementing time\n");
-					++genesis.nTime;
-				}
-				nHashesDone += 1;
-				
-			}
-			printf("genesis.nTime = %u \n", genesis.nTime);
-            printf("genesis.nNonce = %u \n", genesis.nNonce);
-            printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-			printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
-		}
-        assert(consensus.hashGenesisBlock == uint256S("0x00000ab959f584c93ce0ab3fc5f241b74384311b767d9eba8342499da6a3c46c"));
+        assert(consensus.hashGenesisBlock == uint256S("0x42dbf0ee47f5f03f8130b9a83ac73db23ecb2abab129a8c76ad9b8e3cf6b7e7d"));
         assert(genesis.hashMerkleRoot == uint256S("0x00a9a17242d0e53b890f8edfbc2ae017687af7cf929ac2dcb79f2ff4147af2df"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
@@ -656,13 +622,13 @@ public:
 
         checkpointData = (CCheckpointData){
             boost::assign::map_list_of
-            ( 0, uint256S("0x000008ca1832a4baf228eb1553c03d3a2c8e02399550dd6ea8d65cec3ef23d2e"))
+            ( 0, uint256S("0x42dbf0ee47f5f03f8130b9a83ac73db23ecb2abab129a8c76ad9b8e3cf6b7e7d"))
         };
 
         chainTxData = ChainTxData{
+            1538967600,
             0,
-            0,
-            0
+            0.01
         };
 
         // Regtest BCash addresses start with 'y'
