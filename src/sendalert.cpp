@@ -57,10 +57,10 @@ void ThreadSendAlert(CConnman& connman)
     //  Higher numbers mean higher priority
     alert.nPriority     = 5000;
     alert.strComment    = "";
-    alert.strStatusBar  = "URGENT: Upgrade required: see https://www.dash.org";
+    alert.strStatusBar  = "URGENT: Upgrade required: see https://www.bcash.org";
 
     // Set specific client version/versions here. If setSubVer is empty, no filtering on subver is done:
-    // alert.setSubVer.insert(std::string("/Dash Core:0.12.0.58/"));
+    // alert.setSubVer.insert(std::string("/BCash Core:0.12.0.58/"));
 
     // Sign
     if(!alert.Sign())

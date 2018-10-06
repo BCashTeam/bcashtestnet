@@ -3,11 +3,11 @@
 .SH NAME
 dashd \- manual page for dashd v0.12.3.0
 .SH DESCRIPTION
-Dash Core Daemon version v0.12.3.0
+BCash Core Daemon version v0.12.3.0
 .SS "Usage:"
 .TP
 dashd [options]
-Start Dash Core Daemon
+Start BCash Core Daemon
 .SH OPTIONS
 .HP
 \-?
@@ -43,7 +43,7 @@ testnet:
 .HP
 \fB\-conf=\fR<file>
 .IP
-Specify configuration file (default: dash.conf)
+Specify configuration file (default: bcash.conf)
 .HP
 \fB\-daemon\fR
 .IP
@@ -232,7 +232,7 @@ Support filtering of blocks and transaction with bloom filters (default:
 .HP
 \fB\-port=\fR<port>
 .IP
-Listen for connections on <port> (default: 9999 or testnet: 19999)
+Listen for connections on <port> (default: 19902 or testnet: 19903)
 .HP
 \fB\-proxy=\fR<ip:port>
 .IP
@@ -445,7 +445,7 @@ optional). If <category> is not supplied or if <category> = 1,
 output all debugging information.<category> can be: addrman,
 alert, bench, cmpctblock, coindb, db, http, leveldb, libevent,
 lock, mempool, mempoolrej, net, proxy, prune, rand, reindex, rpc,
-selectcoins, tor, zmq, dash (or specifically: gobject,
+selectcoins, tor, zmq, bcash (or specifically: gobject,
 instantsend, keepass, masternode, mnpayments, mnsync,
 privatesend, spork).
 .HP
@@ -496,7 +496,7 @@ Use devnet chain with provided name
 .HP
 \fB\-litemode=\fR<n>
 .IP
-Disable all Dash specific functionality (Masternodes, PrivateSend,
+Disable all BCash specific functionality (Masternodes, PrivateSend,
 InstantSend, Governance) (0\-1, default: 0)
 .HP
 \fB\-sporkaddr=\fR<hex>
@@ -640,7 +640,7 @@ option can be specified multiple times
 .HP
 \fB\-rpcport=\fR<port>
 .IP
-Listen for JSON\-RPC connections on <port> (default: 9998 or testnet:
+Listen for JSON\-RPC connections on <port> (default: 19900 or testnet:
 19998)
 .HP
 \fB\-rpcallowip=\fR<ip>
@@ -654,12 +654,12 @@ option can be specified multiple times
 .IP
 Set the number of threads to service RPC calls (default: 4)
 .SH COPYRIGHT
-Copyright (C) 2014-2017 The Dash Core developers
+Copyright (C) 2014-2017 The BCash Core developers
 Copyright (C) 2009-2017 The Bitcoin Core developers
 
-Please contribute if you find Dash Core useful. Visit <https://dash.org> for
+Please contribute if you find BCash Core useful. Visit <https://bcash.org> for
 further information about the software.
-The source code is available from <https://github.com/dashpay/dash>.
+The source code is available from <https://github.com/dashpay/bcash>.
 
 This is experimental software.
 Distributed under the MIT software license, see the accompanying file COPYING

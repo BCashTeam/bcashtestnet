@@ -1,5 +1,5 @@
 [Unit]
-Description=Dash's distributed currency daemon
+Description=BCash's distributed currency daemon
 After=network.target
 
 [Service]
@@ -9,7 +9,7 @@ Group=dashcore
 Type=forking
 PIDFile=/var/lib/dashd/dashd.pid
 ExecStart=/usr/bin/dashd -daemon -pid=/var/lib/dashd/dashd.pid \
--conf=/etc/dashcore/dash.conf -datadir=/var/lib/dashd -disablewallet
+-conf=/etc/dashcore/bcash.conf -datadir=/var/lib/dashd -disablewallet
 
 Restart=always
 PrivateTmp=true

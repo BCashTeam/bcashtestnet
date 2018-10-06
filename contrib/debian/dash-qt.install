@@ -1,6 +1,6 @@
-usr/local/bin/dash-qt usr/bin
+usr/local/bin/bcash-qt usr/bin
 share/pixmaps/dash32.xpm usr/share/pixmaps
 share/pixmaps/dash16.xpm usr/share/pixmaps
 share/pixmaps/dash128.png usr/share/pixmaps
-debian/dash-qt.desktop usr/share/applications
-debian/dash-qt.protocol usr/share/kde4/services/
+debian/bcash-qt.desktop usr/share/applications
+debian/bcash-qt.protocol usr/share/kde4/services/
