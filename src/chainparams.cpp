@@ -231,8 +231,8 @@ public:
             printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
 			printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
 		}
-        assert(consensus.hashGenesisBlock == uint256S("0x00000ffd590b1485b3caadc19b22e6379c733355108f107a430458cdf3407ab6"));
-        assert(genesis.hashMerkleRoot == uint256S("0xe0028eb9648db56b1ac77cf090b99048a8007e2bb64b68f092c03c7f56a662c7"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000ab959f584c93ce0ab3fc5f241b74384311b767d9eba8342499da6a3c46c"));
+        assert(genesis.hashMerkleRoot == uint256S("0x00a9a17242d0e53b890f8edfbc2ae017687af7cf929ac2dcb79f2ff4147af2df"));
 
 
         vSeeds.push_back(CDNSSeedData("bcash.org", "dnsseed.bcash.org"));
@@ -414,8 +414,8 @@ public:
             printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
 			printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
 		}
-        assert(consensus.hashGenesisBlock == uint256S("0x00000bafbc94add76cb75e2ec92894837288a481e5c005f6563d91623bf8bc2c"));
-        assert(genesis.hashMerkleRoot == uint256S("0xe0028eb9648db56b1ac77cf090b99048a8007e2bb64b68f092c03c7f56a662c7"));
+         assert(consensus.hashGenesisBlock == uint256S("0x00000ab959f584c93ce0ab3fc5f241b74384311b767d9eba8342499da6a3c46c"));
+        assert(genesis.hashMerkleRoot == uint256S("0x00a9a17242d0e53b890f8edfbc2ae017687af7cf929ac2dcb79f2ff4147af2df"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -578,8 +578,8 @@ public:
             printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
 			printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
 		}
-        assert(consensus.hashGenesisBlock == uint256S("0x000008ca1832a4baf228eb1553c03d3a2c8e02399550dd6ea8d65cec3ef23d2e"));
-        assert(genesis.hashMerkleRoot == uint256S("0xe0028eb9648db56b1ac77cf090b99048a8007e2bb64b68f092c03c7f56a662c7"));
+         assert(consensus.hashGenesisBlock == uint256S("0x00000ab959f584c93ce0ab3fc5f241b74384311b767d9eba8342499da6a3c46c"));
+        assert(genesis.hashMerkleRoot == uint256S("0x00a9a17242d0e53b890f8edfbc2ae017687af7cf929ac2dcb79f2ff4147af2df"));
 
         devnetGenesis = FindDevNetGenesisBlock(consensus, genesis, 50 * COIN);
         consensus.hashDevnetGenesisBlock = devnetGenesis.GetHash();
@@ -729,8 +729,8 @@ public:
             printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
 			printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
 		}
-        assert(consensus.hashGenesisBlock == uint256S("0x000008ca1832a4baf228eb1553c03d3a2c8e02399550dd6ea8d65cec3ef23d2e"));
-        assert(genesis.hashMerkleRoot == uint256S("0xe0028eb9648db56b1ac77cf090b99048a8007e2bb64b68f092c03c7f56a662c7"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000ab959f584c93ce0ab3fc5f241b74384311b767d9eba8342499da6a3c46c"));
+        assert(genesis.hashMerkleRoot == uint256S("0x00a9a17242d0e53b890f8edfbc2ae017687af7cf929ac2dcb79f2ff4147af2df"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
